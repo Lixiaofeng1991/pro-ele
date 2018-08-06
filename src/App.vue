@@ -3,10 +3,22 @@
    
     <router-view/>
     <div class="tabs">
-      <router-link to="/home" class="tab">首页</router-link>
-      <router-link to="/discover" class="tab">发现</router-link>
-      <router-link to="/indent" class="tab">订单</router-link>
-      <router-link to="/mine" class="tab">我的</router-link>
+      <router-link to="/home" class="tab">
+        <i class="iconfont home">&#xe74b;</i> 
+        <h4>首页</h4>
+      </router-link>
+      <router-link to="/discover" class="tab">
+        <i class="iconfont">&#xe609;</i>
+        <h4>发现</h4> 
+      </router-link>
+      <router-link to="/indent" class="tab">
+      <i class="iconfont">&#xe63c;</i>
+      <h4>订单</h4> 
+      </router-link>
+      <router-link to="/mine" class="tab">
+      <i class="iconfont">&#xe60e;</i>
+      <h4>我的</h4> 
+      </router-link>
     </div>
    
   </div>
@@ -31,5 +43,11 @@ export default {
 .tab{
   flex: 1;
   text-align: center
+}
+.tab .home{
+  /* font-size: 20px */
+}
+.router-link-active{
+  color:#0089dc;
 }
 </style>
