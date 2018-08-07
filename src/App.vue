@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-   
-    <router-view/>
+    <keep-alive>
+        <router-view/>
+    </keep-alive>
+    
     <div class="tabs">
       <router-link to="/home" class="tab">
         <i class="iconfont home">&#xe74b;</i> 
@@ -20,17 +22,25 @@
       <h4>我的</h4> 
       </router-link>
     </div>
-   
+
+    
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'App'
 }
+
 </script>
 
-<style scoped>
+<style >
+html,body,#app{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .tabs{
   width:100%;
   height: 44px;
@@ -44,9 +54,7 @@ export default {
   flex: 1;
   text-align: center
 }
-.tab .home{
-  /* font-size: 20px */
-}
+
 .router-link-active{
   color:#0089dc;
 }
