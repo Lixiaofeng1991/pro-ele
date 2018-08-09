@@ -26,8 +26,8 @@ export default {
         });
 
         this.scroll.on("scroll",()=>{
-            let disY = this.scroll.y - this.scroll.maxScrollY;
-            this.onScroll(disY);
+            let disY = this.scroll.y;
+            this.onScroll(this);
         })
     }
 }
