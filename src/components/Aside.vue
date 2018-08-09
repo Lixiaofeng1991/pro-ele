@@ -30,10 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.order{
-    font-size: 10px;
-    color: black
-}
+
 </style>
 
 
