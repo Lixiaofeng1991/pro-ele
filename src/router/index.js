@@ -8,7 +8,10 @@ import Search from '@/pages/home/Search.vue'
 
 import Discover from '@/pages/discover/Index.vue'
 import Indent from '@/pages/indent/Index.vue'
-import Mine from '@/pages/mine/Index.vue'
+
+import Mine from '@/pages/mine/Index.vue';
+import Login from "@/pages/mine/Login.vue";
+import Exit from "@/pages/mine/Exit.vue";
 
 Vue.use(Router)
 
@@ -42,6 +45,16 @@ export default new Router({
         path:"/search",
         name:"search",
         component:Search
+      },
+      {
+        path:"/login",
+        name:"login",
+        component:Login
+      },
+      {
+        path:"/exit",
+        name:"exit",
+        component:Exit
       },
       {
         path:"/",

@@ -94,7 +94,7 @@ input,button{
 }
 .header-right button{
     height: 35px;
-    width:32px;
+    width:35px;
     font-size: 16px;
     font-weight: bold;
     background: #fff;

@@ -44,11 +44,12 @@ html,body,#app{
 .tabs{
   width:100%;
   height: 44px;
+  background: #fff;
   position: absolute;
   left: 0;
   bottom: 0;
   display: flex;
-  border-top: 1px solid #999;
+  border-top: 1px solid #ddd;
 }
 .tab{
   flex: 1;
