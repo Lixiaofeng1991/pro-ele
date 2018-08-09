@@ -1,5 +1,4 @@
 /*
-<<<<<<< HEAD
 接口功能：餐厅列表数据
  
 */
@@ -15,23 +14,7 @@ const ASIDE_API = '/restapi/shopping/v1/restaurants/outside_filter/attributes';
 */
 const FILTER_API ='/restapi/shopping/v1/restaurants/filter-bar/attributes';
 
-
-
-
-
-
-
-
-
-
-
-
-export default{
-    BUSINESS_API,
-    ASIDE_API,
-    FILTER_API
-}
-=======
+/*
 接口功能：热门搜索数据接口
 接口参数：
     latitude:纬度
@@ -47,8 +30,12 @@ const HOT_SEARCH_API = '/restapi/shopping/v3/hot_search_words';
 */
 const POSITION_API = '/restapi/bgs/poi/reverse_geo_coding';
 
-export default {
+
+export default{
+    BUSINESS_API,
+    ASIDE_API,
+    FILTER_API,
     HOT_SEARCH_API,
     POSITION_API
 }
->>>>>>> feng
+
