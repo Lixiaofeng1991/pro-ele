@@ -33,7 +33,7 @@
                </section>
                <section class="activities">
                    <div class="act">
-                       <div class="tips">
+                       <div class="tips" v-if="items.activities[1]">
                             <span class="reduce" v-if="items.activities[1].icon_name">{{items.activities[1].icon_name}}</span>
                             <span>{{items.activities[1].tips}}</span>
                         </div>

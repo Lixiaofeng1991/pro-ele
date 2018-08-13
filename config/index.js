@@ -12,16 +12,9 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       "/restapi":{
-<<<<<<< HEAD
         target:"https://h5.ele.me",
         changeOrigin:true
       }
-=======
-        target:'https://h5.ele.me',
-        changeOrigin:true
-      }
-     
->>>>>>> feng
     },
 
     // Various Dev Server settings

@@ -5,18 +5,21 @@
             <h3 class="title">我的</h3>
         </div>
         
-        <div class="content-me" @click="goLoginAction">
-            <div class="icon-login">
-                <i class="iconfont font30">&#xe74b;</i>
+        <router-link to="/exit">
+            <div class="content-me" >
+                <div class="icon-login">
+                    <i class="iconfont font30">&#xe74b;</i>
+                </div>
+                <div class="content-text">
+                    <h3 >{{username}}</h3>
+                    <p><i class="iconfont">&#xe63e;</i> {{mark}}</p>
+                </div>
+                <div class="icon-right">
+                    <i class="iconfont">&#xe6bf;</i>
+                </div>
             </div>
-            <div class="content-text">
-                <h3 >{{username}}</h3>
-                <p><i class="iconfont">&#xe63e;</i> {{mark}}</p>
-            </div>
-            <div class="icon-right">
-                <i class="iconfont">&#xe6bf;</i>
-            </div>
-        </div>
+        </router-link>
+
         <ul class="money">
             <li>钱包</li>
             <li>红包</li>
@@ -70,14 +73,6 @@ export default {
     methods:{
         goBackAction(){
             this.$router.push("/home");
-        },
-        goLoginAction(){
-            if(this.$store.state.userInfo.name){
-                this.$router.push({path:"/exit",query:{name:this.username}})
-            }else{
-                this.$router.push("/login");
-            }
-            
         }
     },
     activated(){

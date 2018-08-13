@@ -1,21 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from "../store"
 
 
-import Home from '@/pages/home/Index.vue'
-import Location from '@/components/home/Location.vue'
-import Search from '@/pages/home/Search.vue'
+import Home from '@/pages/home/Index.vue';
+import Location from '@/pages/home/Location.vue';
+import Search from '@/pages/home/Search.vue';
+import City from "@/pages/home/City.vue";
 
-import Discover from '@/pages/discover/Index.vue'
-import Indent from '@/pages/indent/Index.vue'
+import Discover from '@/pages/discover/Index.vue';
+import Indent from '@/pages/indent/Index.vue';
 
 import Mine from '@/pages/mine/Index.vue';
 import Login from "@/pages/mine/Login.vue";
 import Exit from "@/pages/mine/Exit.vue";
 
+
 Vue.use(Router)
 
-export default new Router({
+
+const router = new Router({
   routes: [
       {
         path:"/home",
@@ -26,13 +30,21 @@ export default new Router({
             path:"location",
             name:"location",
             component:Location,
+            children:[
+              {
+                path:"city",
+                name:"city",
+                component:City
+              }, 
+            ]
           }
         ]
       },
       {
         path:"/discover",
         name:"discover",
-        component:Discover},
+        component:Discover
+      },
       {
         path:"/indent",
         name:"indent",
@@ -54,7 +66,17 @@ export default new Router({
       {
         path:"/exit",
         name:"exit",
-        component:Exit
+        component:Exit,
+        //路由独享守卫
+        beforeEnter(to,from,next){
+          //如果用户已经登录，进入退出页面
+          if(store.state.userInfo.name){
+            next()
+          //如果用户没有登录，君如登录页面
+          }else{
+            next({path:"/login"})
+          }
+        }
       },
       {
         path:"/",
@@ -62,3 +84,5 @@ export default new Router({
       }
   ]
 })
+
+export default router

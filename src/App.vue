@@ -14,12 +14,12 @@
         <h4>发现</h4> 
       </router-link>
       <router-link to="/indent" class="tab">
-      <i class="iconfont">&#xe63c;</i>
-      <h4>订单</h4> 
+        <i class="iconfont">&#xe63c;</i>
+        <h4>订单</h4> 
       </router-link>
       <router-link to="/mine" class="tab">
-      <i class="iconfont">&#xe60e;</i>
-      <h4>我的</h4> 
+        <i class="iconfont">&#xe60e;</i>
+        <h4>我的</h4> 
       </router-link>
     </div>
 

@@ -1,12 +1,12 @@
 import axios from 'axios'
 import API from '../api'
 // 商家列表
-export function getBusinessDate(){
+export function getBusinessDate(params){
     return new Promise((resolve, reject)=>{
         axios.get(API.BUSINESS_API,{
             params:{
-                latitude:22.625428,
-                longitude:113.837942,
+                latitude:params.latitude,
+                longitude:params.longitude,
                 offset:0,
                 limit:8,
                 extras:[
@@ -21,11 +21,7 @@ export function getBusinessDate(){
            
         })
         .then(response=>{
-            // console.log(response)
             let data = response.data.items
-            // return{
-            //     name:items.name
-            // }
             resolve(data);
         })
         .catch(error=>{
@@ -37,12 +33,12 @@ export function getBusinessDate(){
 
 
 // 综合排序
-export function getAsideDate(){
+export function getAsideDate(params){
     return new Promise((resolve,reject)=>{
         axios.get(API.ASIDE_API,{
             params:{
-                latitude:22.626024,
-                longitude:113.837884,
+                latitude:params.latitude,
+                longitude:params.longitude,
                 terminal:'h5'
             }
            
@@ -58,12 +54,12 @@ export function getAsideDate(){
     })
 }
 //筛选数据
-export function getFilterDate(){
+export function getFilterDate(params){
     return new Promise((resolve,reject)=>{
         axios.get(API.FILTER_API,{
             params:{
-                latitude:22.626024,
-                longitude:113.837884,
+                latitude:params.latitude,
+                longitude:params.longitude,
                 terminal:'h5'
             }
            

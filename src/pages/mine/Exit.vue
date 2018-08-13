@@ -8,7 +8,7 @@
         <div class="main">
             <div class="main-head">
                 <p class="main-head-icon">头像</p> 
-                <p class="main-head-username">用户名：{{$route.query.name}}</p>
+                <p class="main-head-username">用户名：{{$store.state.userInfo.name}}</p>
             </div>
             <div class="main-phone">
                 <p class="main-phone-title">账号绑定</p>
