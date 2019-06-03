@@ -6,7 +6,8 @@ import store from "./store";
 
 Vue.prototype.$center = new Vue();
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false
+//
 
 //滚动组件
 import Page from "./components/common/Page.vue";
