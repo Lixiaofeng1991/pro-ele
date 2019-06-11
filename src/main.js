@@ -21,3 +21,4 @@ new Vue({
 })
 
 const aaa='b';
+const bbb ='c';
