@@ -22,3 +22,6 @@ new Vue({
 
 const aaa='b';
 console.log(aaa);
+const bbb ='c';
+const ccc= '333';
+const ccddd = '5';
